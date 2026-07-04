@@ -14,6 +14,77 @@ body {
   text-align: center;
 }
 
+/* ===========================
+   Welcome Screen
+=========================== */
+
+#welcome-screen{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top,#7d3cff,#28114d 45%,#07030f 100%);
+
+    transition:opacity .8s ease;
+}
+
+#welcome-screen.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.welcome-content{
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.welcome-content h1{
+    font-size:2.3rem;
+    color:#FFD700;
+    margin-bottom:15px;
+    text-shadow:0 0 15px rgba(255,215,0,.7);
+}
+
+.welcome-content p{
+    margin-bottom:40px;
+    font-size:1rem;
+    opacity:.9;
+}
+
+#enterBtn{
+
+    padding:18px 40px;
+
+    font-size:1.1rem;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(90deg,#7d3cff,#b366ff);
+
+    box-shadow:
+    0 0 20px rgba(179,102,255,.8),
+    0 0 50px rgba(125,60,255,.4);
+
+    transition:.3s;
+}
+
+#enterBtn:hover{
+
+    transform:scale(1.05);
+}
+
 /* =========================================================
    2️⃣ HEADERS & TEXT
    ========================================================= */
