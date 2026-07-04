@@ -140,6 +140,25 @@ enterBtn.addEventListener("click", async () => {
 
 });
 
+const toggle=document.getElementById("musicToggle");
+
+toggle.onclick=()=>{
+
+    if(music.paused){
+
+        music.play();
+
+        toggle.innerHTML="🔊";
+
+    }else{
+
+        music.pause();
+
+        toggle.innerHTML="🔇";
+
+    }
+
+};
 
 
 //-----------------------------------------------------------------------------------------
