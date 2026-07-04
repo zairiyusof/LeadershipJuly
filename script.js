@@ -117,16 +117,21 @@ function updateCountdown() {
 const music = document.getElementById("bgMusic");
 const welcome = document.getElementById("welcome-screen");
 const enterBtn = document.getElementById("enterBtn");
+const toggle = document.getElementById("musicToggle");
+
+music.volume = 0.5;
+toggle.innerHTML = "🔇";
 
 enterBtn.addEventListener("click", async () => {
 
-    try{
+    try {
 
         music.volume = 0.5;
-
         await music.play();
 
-    }catch(err){
+        toggle.innerHTML = "🔊";
+
+    } catch(err) {
 
         console.error(err);
 
@@ -134,31 +139,33 @@ enterBtn.addEventListener("click", async () => {
 
     welcome.classList.add("hide");
 
-    setTimeout(()=>{
+    setTimeout(() => {
         welcome.remove();
-    },800);
+    }, 800);
 
 });
 
 const toggle=document.getElementById("musicToggle");
 
-toggle.onclick=()=>{
+toggle.addEventListener("click", async () => {
 
-    if(music.paused){
+    if (music.paused) {
 
-        music.play();
+        try {
+            await music.play();
+            toggle.innerHTML = "🔊";
+        } catch (err) {
+            console.error(err);
+        }
 
-        toggle.innerHTML="🔊";
-
-    }else{
+    } else {
 
         music.pause();
-
-        toggle.innerHTML="🔇";
+        toggle.innerHTML = "🔇";
 
     }
 
-};
+});
 
 
 //-----------------------------------------------------------------------------------------
