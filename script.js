@@ -115,23 +115,30 @@ function updateCountdown() {
 //---------------------------------------------------------------------------------------
 
 const music = document.getElementById("bgMusic");
+const welcome = document.getElementById("welcome-screen");
+const enterBtn = document.getElementById("enterBtn");
 
-let started = false;
+enterBtn.addEventListener("click", async () => {
 
-async function startMusic() {
-    if (started) return;
-    started = true;
+    try{
 
-    try {
+        music.volume = 0.5;
+
         await music.play();
-        console.log("Music started");
-    } catch (err) {
-        console.error(err);
-        started = false;
-    }
-}
 
-document.addEventListener("pointerdown", startMusic, { passive: true });
+    }catch(err){
+
+        console.error(err);
+
+    }
+
+    welcome.classList.add("hide");
+
+    setTimeout(()=>{
+        welcome.remove();
+    },800);
+
+});
 
 
 
