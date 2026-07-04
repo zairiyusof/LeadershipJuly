@@ -63,21 +63,7 @@ body {
 }
 
 
-#musicToggle{
-position:fixed;
-bottom:20px;
-right:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-border:none;
-background:#7d3cff;
-color:#fff;
-font-size:22px;
-cursor:pointer;
-z-index:9999;
-box-shadow:0 0 15px rgba(125,60,255,.8);
-}
+
 /* =========================================================
    2️⃣ HEADERS & TEXT
    ========================================================= */
@@ -457,4 +443,20 @@ box-shadow:0 0 25px rgba(208,132,255,.75);
     padding: 10px;
     border-width: 2px;
   }
+}
+
+#musicToggle{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+border:none;
+background:#7d3cff;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 0 15px rgba(125,60,255,.8);
 }
