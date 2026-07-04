@@ -62,6 +62,22 @@ body {
         0 0 50px rgba(153,102,255,.35);
 }
 
+
+#musicToggle{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+border:none;
+background:#7d3cff;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 0 15px rgba(125,60,255,.8);
+}
 /* =========================================================
    2️⃣ HEADERS & TEXT
    ========================================================= */
