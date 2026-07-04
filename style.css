@@ -15,19 +15,31 @@ body {
 }
 
 #musicToggle{
-position:fixed;
-bottom:20px;
-right:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-border:none;
-background:#7d3cff;
-color:#fff;
-font-size:22px;
-cursor:pointer;
-z-index:9999;
-box-shadow:0 0 15px rgba(125,60,255,.8);
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(125,60,255,.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 99999;
+    box-shadow:
+        0 0 20px rgba(125,60,255,.6),
+        inset 0 0 10px rgba(255,255,255,.15);
+    transition: all .3s ease;
+}
+
+#musicToggle:hover{
+    transform: scale(1.08);
+    box-shadow:
+        0 0 35px rgba(208,132,255,.9),
+        inset 0 0 15px rgba(255,255,255,.2);
 }
 
 /* ====================================
